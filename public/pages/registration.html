@@ -1,0 +1,18 @@
+<div id="reg-body">
+		<form id="userForm" name="regForm">
+                <div id='form-reg'>
+				<!--<label>Enter Username</label>!-->
+                    <p id='reg-text'>Регистрация на чате!</p>
+                    <p id='reg-text'>Регистрируясь, вы автоматически соглашаетесь с <a href='#'>условиями пользования</a> нашего чата и его возможностей</p>
+                    <p id='help-text'>Придумайте логин/имя в чате:</p>
+                    <input class="form-control" id="username" placeholder="Логин" ng-model="newUser.username" required autofocus/>
+                    <p id='help-text'>Придумайте пароль:</p>
+                    <input type='password' id='password' placeholder="Пароль" required ng-model="newUser.password" ng-minlength="6"/>   
+                    <p id='help-text'>Повторите пароль:</p>
+                    <input type='password' id='password' placeholder="Пароль" required ng-model="newUser.password2" ng-minlength="6"/>  
+<!--                    <span ng-show="!username.length">{{regInfo}}</span> -->
+                    <input hotkey="{13: 'click'}" type="submit" class="btn btn-primary" id='reg-button' value="Register" ng-click="signIn()" ng-disabled="regForm.$invalid"/>
+    <!--				<a hotkey="{13: 'click'}" type="button" class="btn btn-primary" href="#!/" ng-click="submit()" >Login</a>-->
+			     </div>
+		</form>
+</div>

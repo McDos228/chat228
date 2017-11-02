@@ -1,0 +1,166 @@
+/*Шоб скролл был внизу сразу
+#012d41 - takoi fon
+1ba5b8 - vse menu
+ff404e - header
+Статически нужно там шота сделать*/
+:root {
+    --background:#012d41;
+    --menu:#1ba5b8;
+    --menuu:#DAECF3;
+    --header:#ff404e;
+    
+}
+
+body {
+    font-family: sans-serif;
+	margin: 0; 
+	background: url('../res/71eUUrO.jpg');
+}
+a { 
+    text-decoration: none;
+    color: #FF404E;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* CHAT */
+
+#header{
+    background:#1C1D21;
+    width:100%;
+    height: 50px;
+    color:#FFFFFF;
+    overflow: hidden;
+}
+#avatar {
+    float: right;
+    width: 50px;
+    height: 50px;
+    outline: 1px solid red;
+}
+.notifa {
+    float: right;
+    width: calc(100% - 50px);
+    font-size: 14px;
+}
+#menu {
+    background:#31353D;
+    color: #ffffff;
+    float:left;
+    width:200px;
+    height:calc(100% - 90px);
+}
+.content {
+     background: url('../res/71eUUrO.jpg');
+     margin-left:200px;
+     height:calc(100% - 90px);  
+}
+#chat-area {
+    float: left;
+    height: 100%;
+    width: 80%; 
+    /*-webkit-box-shadow: inset 2px 0px 0px 0px #1C1D21;
+    -moz-box-shadow: inset 2px 0px 0px 0px #1C1D21;
+    box-shadow: inset 2px 0px 0px 0px #1C1D21;*/
+}
+.sent-message {
+    width: 90%;
+    background-color:rgba(127, 255, 212, 0.7);
+    margin-left: calc(5% - 12px);
+    margin-top: 15px;
+    padding: 12px;
+    transition: 0.3s;
+}
+.sent-message:hover {
+    background-color:  rgba(127, 255, 212, 0.85);
+    -webkit-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 20px -5px rgba(0,0,0,0.5);
+}
+#chat {
+    float: left;
+    height: calc(100% - 50px);
+    width: 100%;  
+    overflow: auto;
+}
+
+#message {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    float:left;
+    height: 50px;
+    width:calc(100% - 100px);
+    background-color:rgba(255, 255, 255, 0.7);
+    font-size: medium;
+    padding-left: 5px;
+}
+#send-button {
+    float:left;
+    background: #a3a3a3;
+    height:50px;
+    width: calc(100px - 5px);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+#users-col {
+    float: left;
+    width: 20%;
+    /*width: 16%;
+    margin-left: calc(2% - 12px);*/
+    background: #31353D;
+    overflow: auto;
+}
+#users-online {
+    text-align: center;
+    width: 80%;
+    margin-left: calc(10% - 6px);
+    margin-top: 15px;
+    padding: 12px;
+    background-color:rgba(127, 255, 212, 0.7);
+
+}
+.list-group-item {
+        width: 80%;
+    margin-left: calc(10% - 6px);
+    margin-top: 15px;
+    padding: 12px;
+    background-color:rgba(127, 255, 212, 0.7);
+
+}
+#users-col li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+#users-col ul {
+    margin-left: 0; 
+    padding-left: 0; 
+   }
+
+#send-button:active {
+     transition: 0.2s;
+    background-color:rgba(127, 255, 212, 0.85);
+}
+
+#chat::-webkit-scrollbar
+{
+	width: 5px;
+}
+
+#chat::-webkit-scrollbar-thumb
+{
+	background-color: rgba(127, 255, 212, 0.7);
+}
+.footer{
+	background:#1C1D21;
+    clear:both;
+    width:100%;
+    height:30px;
+    text-align:center;
+    color:#FFFFFF;
+    font-size:14px;
+    padding-top: 10px;
+	bottom: 
+}

@@ -1,0 +1,101 @@
+:root {
+    --background:#012d41;
+    --menu:#31353D;
+    --menuu:rgba(127, 255, 212, 0.7);
+    --header:#1C1D21;
+    
+}
+
+#adminForm {
+    background-color: #1C1D21;
+    margin-left: 10%;
+    width: 80%;
+    height: 100%; 
+}
+#admMenu {
+    float:left;
+    width: 100%;
+}
+#admText {
+    float:left;
+    margin-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 34px;
+	color: white;
+}
+#add-user-button {
+    float:right;
+    padding: 5px;
+    margin-right:5%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: 0;
+    border: 0;
+    background-color: rgba(127, 255, 212, 0.7);
+    width: 100px;
+    height: 40px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#usersList {
+    margin-left: 5%;
+    width: 90%;
+    background-color: #31353D;
+    clear:both;
+    height: 90%;
+    overflow: auto;
+}
+#userRow {
+    padding: 12px;
+    clear:both;
+    height: 100px;
+    border-bottom: 1px solid #2a2c31;
+}
+#userRow:hover {
+    transition: 0.3s;
+    background-color: #373a40;
+}
+#avatar {
+    float: left;
+    width: 100px;
+    height: 100px;
+    outline: 1px solid red;
+}
+#admUserName {
+    margin-left: 15px;
+    float:left;
+    font-size: 18px;
+    margin-top: 39px;
+	color: white;
+}
+#editButtons {
+    float:right;
+}
+#button-edit, #button-delete {
+    outline: 0;
+    border: 0;
+    margin-left: -3px;
+    height: 40px;
+    width: 50px;
+    background-color: var(--menuu);
+    margin-top: 30px;
+}
+#button-edit {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#button-delete {
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#button-edit:hover, #button-delete:hover, #add-user-button:hover {
+    transition: 0.3s;
+    background-color: rgba(175, 255, 228, 1);
+    cursor: pointer;
+} 

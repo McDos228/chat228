@@ -1,0 +1,35 @@
+<div id="login-body">
+         <form id="userForm" name="loginForm">
+                <div id='form-login'>
+				<!--<label>Enter Username</label>!-->
+                    <p id='login-text'>Ола, амигос. Велком ту чат!</p>
+                    <p id='login-text'>Пазязя, залогинься или зарегинься, если наличие твоего акка равно нулю)0)</p>
+                    <input class="form-control" id="username" placeholder="Логин" ng-model="currentUser.username" required autofocus ng-change="checkLoginContent()"/>
+                    <input type='password' id='password' placeholder="Пароль" ng-model="currentUser.password" required/>
+                    <span ng-show="!username.length">{{logInfo}}</span>
+                    <input hotkey="{13: 'click'}" type="submit" class="btn btn-primary" id='login-button' value="Login" ng-click="submit()" ng-disabled="loginForm.$invalid"/>
+    <!--				<a hotkey="{13: 'click'}" type="button" class="btn btn-primary" href="#!/" ng-click="submit()" >Login</a>-->
+                    <p id='register'>Нет аккаунта? <a href="#!/register">Зарегистрируйтесь</a></p>
+			     </div>
+		</form>
+</div>
+
+
+<!--
+<div id="userFormArea">
+	<div class="col-md-12">
+		<form id="userForm" name="loginForm">
+			<div class="form-group">
+                <div id='from-login'>
+                    <p id='login-text'>Ола, амигос. Велком ту чат!</p>
+                    <p id='login-text'>Пазязя, залогинься или зарегинься, если наличие твоего акка равно нулю)0)</p>
+                    <input class="form-control" id="username" placeholder="Логин" ng-model="currentUser.username" required autofocus ng-change="checkLoginContent()"/>
+                    <input type='password' id='password' placeholder="Пароль" ng-model="currentUser.password" required/>
+                    <span ng-show="!username.length">{{logInfo}}</span>
+                    <input hotkey="{13: 'click'}" type="submit" class="btn btn-primary" id='login-button' value="Login" ng-click="submit()" ng-disabled="loginForm.$invalid"/>
+                    <p id='register'>Нет аккаунта? <a href='#'>Зарегистрируйтесь</a></p>
+			     </div>
+             </div>
+		</form>
+	</div>
+</div>-->

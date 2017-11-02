@@ -1,0 +1,47 @@
+<div id="messageArea" class="row">
+    <div id='header'>
+        <div id='avatar'>Avatar</div>
+                <p id='notifa'>Тут все в разработке, работает через пень-колоду и только после тацнев с бубном при свете полной луны. Поэтому АСТАРОЖНА(!!!), можно перецепиться через костыли и все сломать. Вводить своим реальные имена, чтобы я знал кого банить в дальнейшем)00)))</p>
+    </div>
+    <div id='menu'>
+        <div id='left-menucontent'>MENU</div>
+    </div>
+    <div id="content">
+        <div id="chat-area">
+
+                 <div id="chat" scroll="message">
+                	<div class="sent-message" ng-repeat="message in messages">
+                		<strong>{{message.user}}</strong><br>
+                		<span>{{message.msg}}</span>
+                	</div>
+                </div>
+            
+            <form id="messageForm">
+            	<input type="text" class="form-control" id="message" ng-model="message" placeholder="Enter Message" autofocus required autocomplete="off"/>
+                <span>
+                	<button hotkey="{13: 'click'}" type="submit" class="btn btn-default" id='send-button' value="Send Message" ng-click="sendMessage()">Send</button>
+                </span>                  
+            </form>
+            
+        </div>
+        <div id="users-col" id="well">
+                
+                <div class="well usersList">
+                <h3 id='users-online'>Users Online</h3>
+                <ul class="list-group" id="users" ng-repeat="x in usersList">
+                    <li class="list-group-item">{{x}}</li>
+                </ul>
+            </div>
+                
+        </div>
+  
+    </div>
+
+    <div id='footer'>
+        STASIKi (C) (R) ( . ) ( . ) Навальный <strong>20!8</strong>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,98 @@
+/*
+:root {
+    --background:#012d41;
+    --menu:#31353D;
+    --menuu:rgba(127, 255, 212, 0.7);
+    --header:#1C1D21;
+    --color2:#7fffd4; 
+    
+}*/
+html, body, #main {
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+}
+
+body {
+    font-family: sans-serif;
+}
+#reg-body a { 
+    text-decoration: none;
+    color: #7fffd4;
+}
+#reg-body a:hover {
+    text-decoration: underline;
+}
+/* LOGIN */
+#reg-body {
+    background-color: #1C1D21;
+    
+}
+
+#form-reg { /* Окно */
+    background-color: #31353D;
+    color: #fff;
+    position: absolute;
+    width: 360px;
+    height: 324pt;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    -webkit-box-shadow: 16px 16px 27px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 16px 16px 27px 0px rgba(0,0,0,0.5);
+    box-shadow: 16px 16px 27px 0px rgba(0,0,0,0.5);
+    border-radius: 3px;
+}
+#reg-text { /* Настройка текста */
+    text-align: center;
+    font-size: medium;
+    padding: 5px 15px 0;
+}
+#help-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1px;
+    text-align: left;
+    font-size: small;
+    margin-left: 10%;
+}
+#username, #password { /* Поля вводов */
+    background: #eaeaea;
+    width: 80%;
+    border: 0;
+    margin: 0 0 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline-color: #1C1D21;
+}
+#username:focus, #password:focus {
+    transition: 0.5s;
+    outline-color: #fff;
+    background-color: #fff;
+}
+
+#reg-button { /* Кнопке ЛАГИН */
+    font-weight: bold;
+    color: #31353D;
+    outline: 0;
+    background: #7fffd4;
+    width: 80%;
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+#reg-button:disabled {
+    background: #254d40;
+    cursor:default;
+}
+#reg-button:hover:enabled {
+    background-color: #a2ffe0;
+}

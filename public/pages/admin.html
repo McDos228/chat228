@@ -1,0 +1,16 @@
+<div id="adminForm">
+	<div id='admMenu'>
+    	<div id="admText">Odminka</div><button id="add-user-button">Add User</button>
+	</div>
+    <div id="usersList" ng-repeat="user in usersList">
+    	<div id="userRow" > 
+        	<div id="avatar">Avatar</div>
+            <div id="admUserName">{{user[0]}}</div>
+            <div id="editButtons">
+            	<button id="button-edit">Edit</button>
+                <button id="button-delete">Delete</button>
+            </div>                  
+        </div>
+    </div>
+</div>
+ 
