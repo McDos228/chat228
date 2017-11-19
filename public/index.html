@@ -3,17 +3,20 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<title>chat</title>
-<!--	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+	<title>git.chat</title>
+<!--	css-->
 	<link rel="stylesheet" type="text/css" href="css/style.css"> 
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/registration.css">
 	<link rel="stylesheet" type="text/css" href="css/admin.css"> 
+<!--	libs-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/livescript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-	<script type="text/jscript" src="js/app.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+<!--	apps files-->
+	<script type="text/jscript" src="js/app.js"></script>
+	<script type="text/jscript" src="js/parts/directive.js"></script>
 </head>
 <body ng-controller="chatCtrl">
 	<div class="container" ng-view></div>

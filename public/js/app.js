@@ -1,7 +1,4 @@
-(function(){
-	'use strict';
-	
-	var app = angular.module("chatApp", ['ngRoute']);
+var app = angular.module("chatApp", ['ngRoute']);
 	app.config(function($routeProvider) {
 		$routeProvider
 		.when("/login", {
@@ -22,64 +19,11 @@
 		});
 	});
 	
-	
-	app.factory('socket', function($rootScope){
-		var socket = io.connect();
-		return{
-			on: function(eventName, callback){
-				socket.on(eventName, function(){
-					var args = arguments;
-					$rootScope.$apply(function(){
-						callback.apply(socket, args);
-					})
-				})
-			},
-			
-			emit: function(eventName, data, callback){
-				socket.emit(eventName, data, function(){
-					var args = arguments;
-					$rootScope.$apply(function(){
-						if(callback){
-							callback.apply(socket, args);
-						}
-					})
-				})
-			}
-		};	
-	});
-	
-	app.directive('hotkey', function() {
-  		return {
-    		link: function(scope, element, attrs) {
-      			var config = scope.$eval(attrs.hotkey)
-      			angular.forEach(config, function(value, key) {
-        			angular.element(window).on('keydown', function(e) {
-          				if (e.keyCode === Number(key)) {
-            				element.triggerHandler(value)  
-          				}
-        			})
-      			})
-    		}
-  		}
-	})
-	
-	app.directive('scroll', function($timeout){
-		return{
-			restrict: 'A',
-			link: function(scope, element, attr){
-				scope.$watchCollection(attr.scroll, function(newVal){
-					$timeout(function(){
-						element[0].scrollTop = element[0].scrollHeight;
-        			});
-      			});
-    		}
-  		}
-	});
-	
 	app.controller("dashboardCtrl", function($scope, socket, $location, $http){
 		$scope.usersList =[];
 		$http.get('/users/userslist').then(function(data){
-			$scope.usersList.push(data.data.usersList);
+			$scope.usersList = data.data.usersList;
+			
 		});
 		console.log($scope.usersList);
 	})
@@ -121,7 +65,7 @@
 					if( data.status==200){
 						console.log('success');
 						$location.path('/login');
-					}else if(data.status==400){
+					}else if(data.status==403){
 						console.log('error');
 						$scope.regInfo = "Пользователь с таким ником уже существует";
 					}
@@ -159,4 +103,3 @@
 			});
 		}
 	});
-})();
